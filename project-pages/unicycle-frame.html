@@ -34,6 +34,37 @@
 </head>
 
 <body>
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var loaderWrapper = $(".loader-wrapper");
+
+      // Function to fade out the loader
+      function fadeOutLoader() {
+        setTimeout(function() {
+          loaderWrapper.fadeOut("slow");
+        }, 500); // Delay of 0.5 seconds
+      }
+
+
+      // Check if #main element is loaded
+      function checkMainLoaded() {
+        if ($('#main').length) {
+          fadeOutLoader();
+        }
+      }
+
+      // Check on DOMContentLoaded if #main is loaded
+      $(document).ready(function() {
+        checkMainLoaded();
+      });
+    });
+  </script>
+
   <!-- ======= Navbar ======= -->
   <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
     <div class="container py-2 py-md-5">
@@ -80,7 +111,7 @@
 
 
 
-  
+
   <main id="main">
 
     <section class="section">
@@ -96,7 +127,7 @@
       <div class="site-section pb-0">
         <div class="container">
           <div class="row align-items-stretch">
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\full-muni-triangle.JPG" alt="Image" class="img-fluid">
@@ -109,7 +140,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\seat-cover.JPG" alt="Image" class="img-fluid">
@@ -176,7 +207,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\CAD-Models.PNG" alt="Image" class="img-fluid">
@@ -189,7 +220,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\FEA.JPG" alt="Image" class="img-fluid">
@@ -202,7 +233,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\frame-drawings.png" alt="Image" class="img-fluid">
@@ -215,7 +246,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\bearing-holder-drawings.png" alt="Image" class="img-fluid">
@@ -243,7 +274,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\Onepiece-uni\onepiece-uni-fork-painted.jpg" alt="Image" class="img-fluid">
@@ -256,7 +287,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\Onepiece-uni\rollo.jpg" alt="Image" class="img-fluid">
@@ -284,7 +315,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\full-oval-frame.jpg" alt="Image" class="img-fluid">
@@ -297,7 +328,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\bearing-holder.jpg" alt="Image" class="img-fluid">
@@ -310,7 +341,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\bearing-fitup.jpg" alt="Image" class="img-fluid">
@@ -323,7 +354,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\bandsaw-bearings.jpg" alt="Image" class="img-fluid">
@@ -336,7 +367,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\file-bearings.jpg" alt="Image" class="img-fluid">
@@ -349,7 +380,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\fork-with-tire.jpg" alt="Image" class="img-fluid">
@@ -362,7 +393,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\notching.jpg" alt="Image" class="img-fluid">
@@ -375,7 +406,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\chop-saw.jpg" alt="Image" class="img-fluid">
@@ -403,7 +434,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\brake-mounted.JPG" alt="Image" class="img-fluid">
@@ -416,7 +447,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\another-brake-mounted.jpg" alt="Image" class="img-fluid">
@@ -429,7 +460,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\square-handlebar.JPG" alt="Image" class="img-fluid">
@@ -442,7 +473,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--image and text 3-->
             <div class="col-md-8" data-aos="fade-up">
               <img src="..\assets\img\project-images\Unicycle Welding\all-handlebar.jpg" alt="Image" class="img-fluid">

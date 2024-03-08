@@ -26,7 +26,40 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
+
+
+
+
 <body>
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var loaderWrapper = $(".loader-wrapper");
+
+      // Function to fade out the loader
+      function fadeOutLoader() {
+        setTimeout(function() {
+          loaderWrapper.fadeOut("slow");
+        }, 500); // Delay of 0.5 seconds
+      }
+
+      // Check if .site-portfolio section is loaded
+      function checkSitePortfolioLoaded() {
+        if ($('.site-portfolio').length) {
+          fadeOutLoader();
+        }
+      }
+
+      // Check on DOMContentLoaded if .site-portfolio is loaded
+      $(document).ready(function() {
+        checkSitePortfolioLoaded();
+      });
+    });
+  </script>
 
   <!-- ======= Navbar ======= -->
   <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
